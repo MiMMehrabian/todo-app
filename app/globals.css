@@ -7,21 +7,43 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* In your global.css or a CSS module file */
+.line-through-container {
+  position: relative;
+  display: inline-block; /* Required to position the pseudo-element */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.line-through {
+  position: absolute;
+  height: 2px; /* Adjust line thickness */
+  background: gray; /* Line color */
+  top: 50%; /* Center the line vertically */
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%; /* Full width */
+  transform-origin: left; /* Start from the left */
+  transition: transform 0.3s ease; /* Animation duration */
+  transform: scaleX(0); /* Start scaled down to 0 */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.completed .line-through {
+  transform: scaleX(1);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e0d1d1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #919191;
 }
