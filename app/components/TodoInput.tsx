@@ -21,7 +21,7 @@ const TodoInput: React.FC<TodoInputProps> = ({
       onChange={(e) => setInputValue(e.target.value)}
       placeholder="Add a new todo"
       disabled={loading}
-      className="flex-grow border border-gray-300 sm:rounded-l-lg rounded-t-lg sm:rounded-tr-none p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+      className="flex-grow border border-gray-300 sm:rounded-l-lg rounded-t-lg sm:rounded-tr-none p-2 focus:outline-none  focus:ring-blue-400"
     />
     <button
       type="submit"
