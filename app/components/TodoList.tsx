@@ -29,7 +29,7 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg p-6 mt-10 h-[60vh] overflow-y-auto relative ">
+    <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg md:p-6 p-3 mt-10 h-[60vh] overflow-y-auto relative ">
       <div className="sticky top-0 w-full bg-white pb-2 z-10">
         <h1 className="text-2xl font-bold text-center mb-4">Todo List</h1>
         <TodoInput
